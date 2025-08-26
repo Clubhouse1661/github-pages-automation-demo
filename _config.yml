@@ -1,0 +1,88 @@
+# Site Configuration
+title: "GitHub Pages Automation Demo"
+description: "Demonstrating comprehensive GitHub Actions automation for GitHub Pages"
+url: "https://clubhouse1661.github.io"
+baseurl: "/github-pages-automation-demo"
+author: "Clubhouse1661"
+email: "your-email@example.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Collections
+collections:
+  demos:
+    output: true
+    permalink: /:collection/:name/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - WORKFLOW_DOCUMENTATION.md
+  - TROUBLESHOOTING.md
+
+# Sass
+sass:
+  style: compressed
+
+# SEO settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Clubhouse1661"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "demos"
+    values:
+      layout: "demo"
+
+# GitHub repository (for edit links)
+repository: "Clubhouse1661/github-pages-automation-demo"
+
+# Social links
+social:
+  github: "Clubhouse1661"
+
+# Google Analytics (optional)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Performance settings
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Security
+whitelist:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
